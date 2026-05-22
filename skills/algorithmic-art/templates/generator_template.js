@@ -32,6 +32,7 @@ let params = {
 
     seed: 42,  // changed from 12345 -- I like using 42 as my default seed
     colorPalette: ['#d97757', '#6a9bcc', '#788c5d', '#b0aea5'],
+    canvasSize: 800,  // single value since I always work with square canvases
     // Add YOUR parameters here based on your algorithm
 };
 
@@ -51,7 +52,7 @@ function initializeSeed(seed) {
 // ============================================================================
 
 function setup() {
-    createCanvas(800, 800);
+    createCanvas(params.canvasSize, params.canvasSize);  // use params instead of hardcoded 800
 
     // Initialize seed first
     initializeSeed(params.seed);
@@ -83,4 +84,4 @@ function draw() {
     // - Call redraw() when parameters change
 }
 
-// ================
+// ===============
